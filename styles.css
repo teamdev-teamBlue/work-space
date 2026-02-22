@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-text-color: #dc3545;
+  --main-text-color-hover: #b32b39;
+}
+
+/* 要素の表示 */
+.isVisible {
+  display: block;
+}
+/* 要素の非表示 */
+.isHidden {
+  display: none;
+}
+/* 主軸を垂直とした縦横中央揃えのFlexBox指定 */
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ページ全体 */
+.topContainer {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  color: var(--main-text-color);
+  background: linear-gradient(#feebd2, #fcb8a1);
+}
+
+/* トップのおみくじ */
+.omikujiBox img {
+  width: 200px;
+  transform: rotate(12deg);
+  margin-top: 2em;
+}
+
+/* おみくじを引くボタン */
+.omikujiButton {
+  border: none;
+  border-radius: 24px;
+  color: white;
+  padding: .5em 1em;
+  margin: 3em 0;
+  background-color: var(--main-text-color);
+}
+.omikujiButton:hover {
+  background-color: var(--main-text-color-hover);
+}
+
+/* おみくじの結果ページ */
+.omikujiPaper {
+  text-align: center;
+}
+
+/* フッター */
+footer {
+  font-size: small;
+}
+footer a {
+  color: var(--main-text-color);
+}
+footer p {
+  font-size: .5rem;
+  margin-top: 2em;
+}

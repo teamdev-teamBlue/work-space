@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おみくじ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topContainer flexColumn">
+    <div class=" isVisible omikujiBox flexColumn">
+      <h1 class="topTitle">おみくじ</h1>
+      <img src="img/omikuji.PNG" alt="おみくじのイラスト">
+      <button class="omikujiButton">おみくじを引く</button>
+    </div>
+    <!-- おみくじ表示 -->
+    <div id="fortuneResult" class="isHidden omikujiPaper">
+      <h2>おみくじ</h2>
+      <hr>
+      <div class="fortuneContents">
+        <img id="resultImg" src="" alt="">
+        <h1 id="fortune"></h1>
+      </div>
+      <hr>
+      <div>
+        <p id="fortuneComment"></p>
+      </div>
+      <hr>
+      <div>
+        <h3>✿ ラッキーカラー ✿</h3>
+        <p id="luckyColor">
+          // 
+        </p>
+      </div>
+      <hr>
+      <div>
+        <h3>✿ ラッキードリンク ✿</h3>
+        <p id="luckyDrink">
+          // 
+        </p>
+      </div>
+      <hr>
+      <div>
+        <h3>✿ ラッキーアクション ✿</h3>
+        <p id="luckyAction">
+          // 
+        </p>
+      </div>
+      <button id="reTryButton" class="omikujiButton">もう一度おみくじを引く</button>
+    </div>
+    <footer>
+      <div>
+        <a href="about.html">このおみくじについて</a>｜
+        <a href="developers.html">開発者一覧</a>
+      </div>
+      <p>©︎おみくじ</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
