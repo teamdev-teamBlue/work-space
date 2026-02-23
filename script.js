@@ -144,6 +144,7 @@ function drawFortuneSlip(){
     console.log(fortuneSlip.toString());
     createFortuneSlipPage(fortuneSlip);
     goToFortuneResultPage();
+    pages.fortuneResultPage.scrollTop = 0;
 }
 
 // Event listeners
