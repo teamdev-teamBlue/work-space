@@ -19,8 +19,8 @@ const pages = {
 const comments = [
     "きちが、とても大きくなりました。頭を雲の上に出し、雷さまを下に聞くサイズ感です。",
     "きちが、やや大きくなりました。もっと大きくなれると主張しています。",
-    "きちが、とても小さくなりました。胸ポケットに入れられるサイズ感です。",
     "普通のサイズのきちです。やや小柄でふわふわしていてかわいいですね。",
+    "きちが、とても小さくなりました。胸ポケットに入れられるサイズ感です。",    
     "きちが、末っ子のきちょうだいを紹介してくれました。どうやら照れ屋さんのようです。"
   ]; 
 
@@ -127,13 +127,13 @@ function createFortuneSlipPage(fortuneSlip){
 
 // Page navigation
 function gotoTopPage(){
-    displayNone(pages.topPage); //topPage
-    displayBlock(pages.fortuneResultPage); //fortuneResultPage
+    displayNone(pages.topPage);
+    displayBlock(pages.fortuneResultPage);
 }
 
 function backToTopPage(){
-    displayNone(pages.fortuneResultPage); //fortuneResultPage
-    displayBlock(pages.topPage); //topPage
+    displayNone(pages.fortuneResultPage);
+    displayBlock(pages.topPage);
 }
 
 // --------------
