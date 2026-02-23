@@ -141,14 +141,9 @@ footer p {
   .omikujiPaper {
     width: 280px;
   }
-  .aboutContents {
-    height: auto;
-    padding: 16px;
-    overflow: hidden;
-  }
 }
 
-@media screen and (min-height: 520px) {
+@media screen and (min-height: 560px) {
   #topPage {
     margin: 0 0 1em 0;
   }
@@ -157,5 +152,10 @@ footer p {
   }
   #drawButton {
     margin: 1.5em 0 2em 0;
+  }
+  .aboutContents {
+    height: auto;
+    padding: 16px;
+    overflow: hidden;
   }
 }
