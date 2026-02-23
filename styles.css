@@ -4,8 +4,6 @@
   text-decoration: none;
   box-sizing: border-box;
   font-family: "Yuji Syuku", serif;
-  /* font-weight: 400; */
-  /* font-style: normal; */
 }
 
 :root {
@@ -110,7 +108,7 @@ hr {
   width: 100%;
 }
 #fortuneComment {
-  font-size: .9em;
+  font-size: .9rem;
   text-align: left;
 }
 #reTryButton {
@@ -135,6 +133,7 @@ footer p {
   overflow-y: scroll;
   justify-content: normal;
 }
+
 @media screen and (min-width: 320px) {
   .topTitle {
     font-size: 2.4rem;
@@ -160,5 +159,3 @@ footer p {
     margin: 1.5em 0 2em 0;
   }
 }
-
-/* 230×425 px */
