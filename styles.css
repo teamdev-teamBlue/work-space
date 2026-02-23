@@ -72,11 +72,13 @@ h3 {
   background-color: white;
 }
 .omikujiPaper ul {
-  width: 90%;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   list-style: square;
   text-align: left;
-  padding-left: 1em;
+  padding: 0 .5em 0 2em;
 }
 .omikujiPaper ul li {
   padding-bottom: 1em;
