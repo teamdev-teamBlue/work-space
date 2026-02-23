@@ -143,7 +143,7 @@ function drawFortuneSlip(){
     const fortuneSlip = createFortuneSlip();
     console.log(fortuneSlip.toString());
     createFortuneSlipPage(fortuneSlip);
-    goToFortuneResultPage()    
+    goToFortuneResultPage();
 }
 
 // Event listeners
