@@ -126,7 +126,7 @@ function createFortuneSlipPage(fortuneSlip){
 }
 
 // Page navigation
-function gotoTopPage(){
+function goToFortuneResultPage(){
     displayNone(pages.topPage);
     displayBlock(pages.fortuneResultPage);
 }
@@ -143,5 +143,9 @@ function drawFortuneSlip(){
     const fortuneSlip = createFortuneSlip();
     console.log(fortuneSlip.toString());
     createFortuneSlipPage(fortuneSlip);
-    gotoTopPage()    
+    goToFortuneResultPage()    
 }
+
+// Event listeners
+document.getElementById("drawButton").addEventListener("click", drawFortuneSlip);
+document.getElementById("reTryButton").addEventListener("click", backToTopPage);
