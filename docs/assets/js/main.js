@@ -20,16 +20,16 @@ const comments = [
     "きちが、とても大きくなりました。頭を雲の上に出し、雷さまを下に聞くサイズ感です。",
     "きちが、やや大きくなりました。もっと大きくなれると主張しています。",
     "普通のサイズのきちです。やや小柄でふわふわしていてかわいいですね。",
-    "きちが、とても小さくなりました。胸ポケットに入れられるサイズ感です。",    
+    "きちが、とても小さくなりました。胸ポケットに入れられるサイズ感です。",
     "きちが、末っ子のきちょうだいを紹介してくれました。どうやら照れ屋さんのようです。"
-  ]; 
+  ];
 
 const typesOfFortunes = [
-    {fortune:"大吉", fortuneImage:"./img/daikichi.png", fortuneComment: comments[0]}, 
-    {fortune:"中吉", fortuneImage:"./img/chukichi.png", fortuneComment: comments[1]}, 
-    {fortune:"吉", fortuneImage:"./img/kichi.png", fortuneComment: comments[2]},
-    {fortune:"小吉", fortuneImage:"./img/shokichi.png", fortuneComment: comments[3]}, 
-    {fortune:"末吉", fortuneImage:"./img/suekichi.png", fortuneComment: comments[4]}
+    {fortune:"大吉", fortuneImage:"assets/images/daikichi.PNG", fortuneComment: comments[0]}, 
+    {fortune:"中吉", fortuneImage:"assets/images/chukichi.PNG", fortuneComment: comments[1]}, 
+    {fortune:"吉", fortuneImage:"assets/images/kichi.PNG", fortuneComment: comments[2]},
+    {fortune:"小吉", fortuneImage:"assets/images/shokichi.PNG", fortuneComment: comments[3]}, 
+    {fortune:"末吉", fortuneImage:"assets/images/suekichi.PNG", fortuneComment: comments[4]}
 ];
 
 const fortuneluckyColor = [
@@ -139,7 +139,7 @@ function backToTopPage(){
 // --------------
 // Main
 // --------------
-function drawFortuneSlip(){    
+function drawFortuneSlip(){
     const fortuneSlip = createFortuneSlip();
     console.log(fortuneSlip.toString());
     createFortuneSlipPage(fortuneSlip);
