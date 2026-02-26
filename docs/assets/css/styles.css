@@ -36,9 +36,11 @@
 html, body {
   height: 100%;
 }
-img,
-.omikujiButton {
+a, img {
   user-select: none;
+}
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 .topContainer {
   width: 100%;
