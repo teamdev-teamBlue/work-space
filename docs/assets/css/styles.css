@@ -51,7 +51,7 @@ a {
 }
 
 /* トップのおみくじ */
-.omikujiBox img {
+#omikujiBoxImage {
   width: 50%;
   min-width: 100px;
   margin: 1em 0;
@@ -119,6 +119,43 @@ hr {
 }
 #reTryButton {
   margin-top: 1.5em;
+}
+
+/* アニメーション */
+.shakeBox {
+  animation: shakeBox .3s 2;
+  transform-origin: bottom center;
+}
+@keyframes shakeBox {
+  40% { transform: rotate(-6deg); }
+  80% { transform: rotate(6deg); }
+}
+
+.expansionKichi {
+  transform-origin: center;
+  animation: expansionKichi 1s ease-in-out;
+}
+@keyframes expansionKichi {
+  0% { transform: scale(.8); }
+  50% { transform: scale(1); }
+  80% { transform: scale(1.5); }
+}
+
+.openResult {
+  animation: openResult .3s ease-in-out;
+}
+@keyframes openResult {
+  0% { transform: scale(.9); }
+  100% { transform: scale(1); }
+}
+
+.bounce {
+  animation: bounce .3s ease-out;
+  transform-origin: bottom center;
+}
+@keyframes bounce {
+  50% { transform: scale(1, .8); }
+  100% { transform: scale(1); }
 }
 
 /* フッター */

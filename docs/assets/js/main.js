@@ -15,6 +15,8 @@ const pages = {
     fortuneResultPage:document.getElementById("fortuneResult")
 }
 
+const omikujiBox = document.getElementById("omikujiBoxImage");
+
 // Data
 const comments = [
     "きちが、とても大きくなりました。頭を雲の上に出し、雷さまを下に聞くサイズ感です。",
@@ -75,6 +77,14 @@ const fortuneluckyAction = [
   "おしゃべり"
 ];
 
+// Top OmikujiBox Image
+const boxImage = {
+    on: "assets/images/omikuji.PNG",
+    down: "assets/images/omikuji-kichiDown.PNG",
+    off: "assets/images/omikuji-kichiOff.PNG",
+    silhouette: "assets/images/kichi-silhouette.PNG",
+}
+
 // FortuneSlip
 class FortuneSlip {
     constructor(fortuneResult){
@@ -131,20 +141,56 @@ function goToFortuneResultPage(){
     displayBlock(pages.fortuneResultPage);
 }
 
-function backToTopPage(){
+async function backToTopPage(){
+    setImage("omikujiBoxImage", boxImage.on); // トップ画像を初期化
     displayNone(pages.fortuneResultPage);
     displayBlock(pages.topPage);
+    await waitAnimation(omikujiBox, "bounce");
+}
+
+// animation
+function sleep(ms) { // 次の処理を待たせる
+    return new Promise(resolve => {
+        setTimeout(resolve, ms);
+    });
+}
+
+function waitAnimation(element, className) {
+    // CSSアニメーションの終了を待つ
+    return new Promise(resolve => {
+        element.classList.add(className);
+        element.addEventListener("animationend", () => {
+            element.classList.remove(className);
+            resolve();
+        }, {once: true});
+    });
+}
+
+async function drawAnimations() {
+    setImage("omikujiBoxImage", boxImage.down);
+    await sleep(300);
+
+    setImage("omikujiBoxImage", boxImage.off);
+    await sleep(200);
+
+    await waitAnimation(omikujiBox, "shakeBox");
+    await sleep(300);
+
+    setImage("omikujiBoxImage", boxImage.silhouette);
+    await waitAnimation(omikujiBox, "expansionKichi");
 }
 
 // --------------
 // Main
 // --------------
-function drawFortuneSlip(){
+async function drawFortuneSlip(){
+    await drawAnimations();
     const fortuneSlip = createFortuneSlip();
     console.log(fortuneSlip.toString());
     createFortuneSlipPage(fortuneSlip);
     goToFortuneResultPage();
     pages.fortuneResultPage.scrollTop = 0;
+    pages.fortuneResultPage.classList.add("openResult");
 }
 
 // Event listeners
